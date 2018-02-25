@@ -1,0 +1,31 @@
+package menu;
+
+import java.util.ArrayList;
+
+import javax.swing.JMenuBar;
+
+import menu.menubar.File;
+
+public class Menu {
+	
+	public JMenuBar menuBar;
+	
+	public ArrayList<MenuHandler> list = new ArrayList<>();
+	
+	public void addMenus() {
+		menuBar = new JMenuBar();
+		
+		for (int i = 0; i < list.size(); i++) {
+			list.get(i).add(menuBar);
+		}
+	}
+	
+	public void add(MenuHandler handler) {
+		list.add(handler);
+	}
+	
+	public static void initMenu1(Menu menu) {
+		menu.add(new File());
+	}
+	
+}

@@ -1,0 +1,21 @@
+package menu;
+
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+
+public abstract class Menu {
+	
+	private JMenuBar menubar;
+	private JMenu menu;
+	
+	public Menu() {
+		menubar = new JMenuBar();
+	}
+	
+	public JMenuBar getMenuBar() {
+		return menubar;
+	}
+	
+	public abstract void execute();
+	public abstract Menu parent();
+}

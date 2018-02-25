@@ -1,0 +1,27 @@
+package main;
+
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
+import frame.Frame;
+
+public class Main {
+	
+	static Frame frame;
+	
+	public static void main(String[] args) {
+		setLookAndFeel();
+		
+		frame = new Frame();
+	}
+	
+	private static void setLookAndFeel() {
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+				| UnsupportedLookAndFeelException e) {
+			e.printStackTrace();
+		}
+	}
+	
+}

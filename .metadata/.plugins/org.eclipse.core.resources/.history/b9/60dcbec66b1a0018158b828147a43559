@@ -1,0 +1,23 @@
+package frame;
+
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import java.awt.TextArea;
+
+@SuppressWarnings("serial")
+public class MainPanel extends JPanel {
+	
+	private TextArea code;
+	
+	public MainPanel() {
+		setLayout(new BorderLayout(0, 0));
+		
+		code = new TextArea();
+		add(code, BorderLayout.CENTER);
+	}
+	
+	public String getCode() {
+		return code.getText();
+	}
+
+}

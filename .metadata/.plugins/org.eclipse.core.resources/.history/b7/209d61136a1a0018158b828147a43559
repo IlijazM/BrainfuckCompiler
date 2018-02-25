@@ -1,0 +1,42 @@
+package menu;
+
+import java.awt.Component;
+import java.util.ArrayList;
+
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+
+public abstract class Menu {
+	
+	private Component menu;
+	
+	public Menu() {
+		menu = new JMenu();
+		
+		if (childs() != null) {
+			for (int i = 0; i < childs().size(); i++) {
+				menu.add((JMenuBar) childs().get(i).getMenu());
+			}
+		}
+	}
+	
+	public Component getMenu() {
+		return menu;
+	}
+	
+	public JMenuBar getMenuBar() {
+		JMenuBar menuBar = new JMenuBar();
+		
+		for (int i = 0; i < menu.getItemCount(); i++) {
+			menuBar.add(menu.getItem(i));
+		}
+		
+		return menuBar;
+	}
+	
+	public ArrayList<Menu> childs() {
+		return null;
+	}
+	
+	public abstract void execute();
+}

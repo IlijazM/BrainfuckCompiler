@@ -1,0 +1,33 @@
+package frame;
+
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import java.awt.TextArea;
+import javax.swing.JButton;
+
+@SuppressWarnings("serial")
+public class MainPanel extends JPanel {
+	
+	private TextArea code;
+	
+	public MainPanel() {
+		setLayout(new BorderLayout(0, 0));
+		
+		code = new TextArea();
+		add(code, BorderLayout.CENTER);
+		
+		TextArea output = new TextArea();
+		add(output, BorderLayout.WEST);
+		
+		JPanel panel = new JPanel();
+		add(panel, BorderLayout.SOUTH);
+		
+		JButton btnConvert = new JButton("Convert");
+		panel.add(btnConvert);
+	}
+	
+	public String getCode() {
+		return code.getText();
+	}
+
+}

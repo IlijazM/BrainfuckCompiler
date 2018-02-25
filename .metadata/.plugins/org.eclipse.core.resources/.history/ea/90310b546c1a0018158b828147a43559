@@ -1,0 +1,12 @@
+package compile;
+
+public abstract class Command {
+	
+	public static void Init() {
+		
+	}
+	
+	public void execute() {
+		
+	}
+}

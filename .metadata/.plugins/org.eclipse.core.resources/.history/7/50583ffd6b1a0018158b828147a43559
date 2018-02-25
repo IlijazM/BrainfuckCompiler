@@ -1,0 +1,9 @@
+package compile;
+
+public class Compiler {
+	
+	public static String compileCode(Stinrg code) {
+		return "Hello, world";
+	}
+	
+}

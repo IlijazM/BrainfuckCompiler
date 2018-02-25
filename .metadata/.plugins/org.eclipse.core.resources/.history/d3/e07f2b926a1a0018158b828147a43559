@@ -1,0 +1,5 @@
+package menu.menubar;
+
+class File extends Menu {
+
+}
