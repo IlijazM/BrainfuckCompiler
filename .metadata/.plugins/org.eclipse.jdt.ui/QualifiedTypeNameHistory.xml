@@ -7,7 +7,6 @@
 <fullyQualifiedTypeName name="frame.MainPanel"/>
 <fullyQualifiedTypeName name="javax.swing.JMenuBar"/>
 <fullyQualifiedTypeName name="javax.swing.JMenu"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.awt.Component"/>
 <fullyQualifiedTypeName name="javax.swing.JMenuItem"/>
 <fullyQualifiedTypeName name="java.awt.Menu"/>
@@ -18,5 +17,6 @@
 <fullyQualifiedTypeName name="menu.menubar.File"/>
 <fullyQualifiedTypeName name="menu.Menu"/>
 <fullyQualifiedTypeName name="compile.Compiler"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="compile.Command"/>
 </qualifiedTypeNameHistroy>

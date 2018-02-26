@@ -1,0 +1,17 @@
+package compile;
+
+public class Compiler {
+	
+	public static int pointer;
+	public static int[] mem;
+	
+	public static String compileCode(String code) {
+		pointer = 0;
+		mem = new int[256];
+		
+		String[] lines = code.split(System.lineSeparator());
+		
+		return "Hello, world";
+	}
+	
+}

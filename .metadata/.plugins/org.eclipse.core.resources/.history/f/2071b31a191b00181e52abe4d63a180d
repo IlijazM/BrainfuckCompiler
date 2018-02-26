@@ -1,0 +1,11 @@
+package compile;
+
+public class Compiler {
+	
+	public static 
+	
+	public static String compileCode(String code) {
+		return "Hello, world";
+	}
+	
+}

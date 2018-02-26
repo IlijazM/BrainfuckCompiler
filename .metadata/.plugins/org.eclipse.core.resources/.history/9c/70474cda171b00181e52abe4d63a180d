@@ -1,0 +1,18 @@
+package compile;
+
+public abstract class Command {
+	
+	public static void Init() {
+		
+	}
+	
+	public void execute(String string) {
+		String begin = string.substring(string.indexOf(' '))
+		
+		System.out.println(begin);
+	}
+	
+	public abstract String name();
+	
+	public abstract String convert();
+}
