@@ -1,0 +1,15 @@
+package compile;
+
+class Print extends Command {
+
+	@Override
+	public String name() {
+		return "OUT";
+	}
+
+	@Override
+	public String convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
+		return ".";
+	}
+	
+}

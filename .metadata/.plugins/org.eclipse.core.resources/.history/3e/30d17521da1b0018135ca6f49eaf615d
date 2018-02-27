@@ -1,0 +1,20 @@
+package compile;
+
+class Print extends Command {
+
+	@Override
+	public String name() {
+		return "out";
+	}
+	
+	@Override
+	public String description() {
+		return "out var";
+	}
+	
+	@Override
+	public String convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
+		return gotoc();
+	}
+	
+}

@@ -1,0 +1,50 @@
+package frame;
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextPane;
+
+import compile.Compiler;
+
+@SuppressWarnings("serial")
+public class MainPanel extends JPanel {
+	
+	private JTextPane code;
+	
+	public MainPanel() {
+		setLayout(new BorderLayout(0, 0));
+		
+		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		add(tabbedPane, BorderLayout.CENTER);
+		
+		code = new JTextPane();
+		tabbedPane.addTab("Code", null, code, null);
+		
+		JTextPane output = new JTextPane();
+		tabbedPane.addTab("Output", null, output, null);
+		
+		JPanel panel = new JPanel();
+		add(panel, BorderLayout.SOUTH);
+		
+		JButton btnConvert = new JButton("Convert");
+		btnConvert.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				output.setText(Compiler.compileCode(getCode()));
+				
+				tabbedPane.setSelectedIndex(1);
+			}
+		});
+		panel.add(btnConvert);
+	}
+	
+	public String getCode() {
+		return code.getText();
+	}
+
+}

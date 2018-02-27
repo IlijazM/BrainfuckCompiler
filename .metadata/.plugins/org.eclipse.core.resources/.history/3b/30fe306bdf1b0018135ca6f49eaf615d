@@ -1,0 +1,27 @@
+package compile;
+
+class Add extends Command {
+
+	@Override
+	public String name() {
+		return "add";
+	}
+	
+	@Override
+	public String description() {
+		return "add var amount";
+	}
+	
+	@Override
+	public String convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
+		if (isNumber(args[2])) {
+			String var = args[1];
+			int pointer = getPointer(var);
+			
+			int amount = Integer.parseInt(args[2]);
+			
+			return gotoc(pointer) + add(amount);
+		}
+	}
+
+}

@@ -1,0 +1,15 @@
+package compile;
+
+class Log extends Command {
+
+	@Override
+	public String name() {
+		return "log";
+	}
+
+	@Override
+	public String convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
+		return null;
+	}
+
+}

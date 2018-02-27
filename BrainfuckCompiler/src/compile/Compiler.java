@@ -5,7 +5,11 @@ public class Compiler {
 	public static int pointer;
 	public static int[] mem;
 	
+	private static String out;
+	
 	public static String compileCode(String code) {
+		out = "";
+		
 		pointer = 0;
 		mem = new int[256];
 		
@@ -17,7 +21,11 @@ public class Compiler {
 			Command.executeAll(line);
 		}
 		
-		return "Hello, world";
+		return out;
+	}
+	
+	public static void appendCode(String string) {
+		out += string;
 	}
 	
 }
