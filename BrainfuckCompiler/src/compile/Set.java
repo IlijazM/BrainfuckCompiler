@@ -17,11 +17,17 @@ class Set extends Command {
 		String var = args[1];
 		int pointer = getPointer(var);
 		
-		int amount = Integer.parseInt(args[2]);
+		if (isNumber(args[2])) {
+			int amount = Integer.parseInt(args[2]);
+			
+			gotoc(pointer);
+			append("[-]");
+			add(amount);
+			
+			return;
+		}
 		
-		gotoc(pointer);
-		append("[-]");
-		add(amount);
+		set(pointer, getPointer(args[2]));
 	}
 
 }

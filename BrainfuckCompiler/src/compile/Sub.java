@@ -17,10 +17,27 @@ class Sub extends Command {
 		String var = args[1];
 		int pointer = getPointer(var);
 		
-		int amount = Integer.parseInt(args[2]);
+		if (isNumber(args[2])) {
+			int amount = Integer.parseInt(args[2]);
+			
+			gotoc(pointer);
+			sub(amount);
+			
+			return;
+		}
 		
+		String var2 = args[2];
+		int pointer2 = getPointer(var2);
+		
+		int t = findTempMem();
+		
+		set(t, pointer2);
+		gotoc(t);
+		append("[");
 		gotoc(pointer);
-		sub(amount);
+		append("-");
+		gotoc(t);
+		append("-]");
 	}
 
 }

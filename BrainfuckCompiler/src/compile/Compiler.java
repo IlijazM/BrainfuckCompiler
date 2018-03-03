@@ -13,6 +13,8 @@ public class Compiler {
 		pointer = 0;
 		mem = new int[256];
 		
+		Command.Init();
+		
 		String[] lines = code.split(System.lineSeparator());
 		
 		for (int i = 0; i < lines.length; i++) {

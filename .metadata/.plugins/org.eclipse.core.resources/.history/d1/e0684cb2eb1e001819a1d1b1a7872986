@@ -1,0 +1,13 @@
+package compile;
+
+class Move extends Command {
+
+	@Override
+	public String name() {
+	}
+
+	@Override
+	public void convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
+	}
+
+}

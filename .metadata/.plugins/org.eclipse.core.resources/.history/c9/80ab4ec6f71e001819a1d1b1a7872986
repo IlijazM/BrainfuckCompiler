@@ -1,0 +1,30 @@
+package compile;
+
+class Log extends Command {
+
+	@Override
+	public String name() {
+		return "log";
+	}
+	
+	@Override
+	public String description() {
+		return "log var";
+	}
+
+	@Override
+	public void convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
+		System.out.println(Arrays.toString(Compiler.mem));
+		int pointer = getPointer(args[1]);
+		System.out.println(Arrays.toString(Compiler.mem));
+		
+		int t = findTempMem();
+		
+		set(t, pointer);
+		append(System.lineSeparator());
+		gotoc(t);
+		append(System.lineSeparator());
+		append("[>>+>+<<<-]>>>[<<<+>>>-]<<+>[<->[>++++++++++<[->-[>+>>]>[+[-<+>]>+>>]<<<<<]>[-]++++++++[<++++++>-]>[<<+>>-]>[<<+>>-]<<]>]<[->>++++++++[<++++++>-]]<[.[-]<]<[-]<");
+	}
+
+}

@@ -14,11 +14,20 @@ class Print extends Command {
 	
 	@Override
 	public void convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
-		String var = args[1];
-		int pointer = getPointer(var);
-		
-		gotoc(pointer);
-		append(".");
+		if (isNumber(args[1])) {
+			int t = findTempMem();
+			gotoc(t);
+			append("[-]");
+			add(Integer.parseInt(args[1]));
+			append(".");
+			append("[-]");
+		} else {
+			String var = args[1];
+			int pointer = getPointer(var);
+			
+			gotoc(pointer);
+			append(".");
+		}
 	}
 	
 }
