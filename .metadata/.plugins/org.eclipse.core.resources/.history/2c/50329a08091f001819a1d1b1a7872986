@@ -1,0 +1,20 @@
+package compile;
+
+class Not extends Command {
+
+	@Override
+	public String name() {
+		return "not";
+	}
+	
+	@Override
+	public String description() {
+		return "not var var";
+	}
+
+	@Override
+	public void convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
+		
+	}
+
+}

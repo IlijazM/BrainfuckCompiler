@@ -1,0 +1,14 @@
+package compile;
+
+class Invert extends Command {
+
+	@Override
+	public String name() {
+		return "inv";
+	}
+
+	@Override
+	public void convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
+	}
+
+}

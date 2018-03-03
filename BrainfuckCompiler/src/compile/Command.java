@@ -5,18 +5,31 @@ import java.util.ArrayList;
 public abstract class Command {
 	
 	static ArrayList<String> vars;
+	static ArrayList<String> functions;
+	static ArrayList<Integer> functionsPointer;
 	public static ArrayList<Command> commands;
 	
 	public static void Init() {
 		vars = new ArrayList<>();
+		functions = new ArrayList<>();
+		functionsPointer = new ArrayList<>();
 		commands = new ArrayList<>();
 		
+		commands.add(new Comment());
 		commands.add(new Set());
 		commands.add(new Move());
 		commands.add(new Add());
 		commands.add(new Sub());
 		commands.add(new Print());
 		commands.add(new Log());
+		commands.add(new Txt());
+		commands.add(new Sum());
+		commands.add(new Input());
+		commands.add(new _Equals());
+		commands.add(new Invert());
+		commands.add(new Not());
+		commands.add(new While());
+		commands.add(new End());
 	}
 	
 	public static void append(String s) {
@@ -150,7 +163,7 @@ public abstract class Command {
 			gotoc(p);
 			
 			for (int i = 0; i < a; i++) {
-				append("+");
+				append("-");
 			}
 			
 			Compiler.mem[p] = 1;

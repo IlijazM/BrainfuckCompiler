@@ -1,0 +1,20 @@
+package compile;
+
+public class Comment extends Command {
+
+	@Override
+	public String name() {
+		return null;
+	}
+	
+	@Override
+	public String description() {
+		return "# comment";
+	}
+
+	@Override
+	public void convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
+		
+	}
+
+}

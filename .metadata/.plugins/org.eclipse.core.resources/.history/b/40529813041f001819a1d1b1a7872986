@@ -1,0 +1,30 @@
+package compile;
+
+class _Equals extends Command {
+
+	@Override
+	public String name() {
+		return "equ";
+	}
+	
+	@Override
+	public String description() {
+		return "equ out_var var var";
+	}
+
+	@Override
+	public void convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
+		int p1 = getPointer(args[1]);
+		int p2 = getPointer(args[2]);
+		int p3 = getPointer(args[3]);
+		
+		int t1 = findTempMem();
+		int t2 = findTempMem();
+
+		gotoc(t1);
+		append("[-]");
+		gotoc(t2);
+		append("[-]");
+	}
+
+}

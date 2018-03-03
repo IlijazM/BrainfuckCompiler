@@ -1,0 +1,5 @@
+package compile;
+
+class Equals extends Command {
+
+}

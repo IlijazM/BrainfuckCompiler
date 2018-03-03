@@ -1,0 +1,14 @@
+package compile;
+
+class End extends Command {
+
+	@Override
+	public String name() {
+		return "end";
+	}
+
+	@Override
+	public void convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
+	}
+
+}

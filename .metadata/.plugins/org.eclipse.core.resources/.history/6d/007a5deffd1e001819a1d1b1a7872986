@@ -1,0 +1,39 @@
+package compile;
+
+class Txt extends Command {
+
+	@Override
+	public String name() {
+		return "txt";
+	}
+	
+	@Override
+	public String description() {
+		return "txt string";
+	}
+
+	@Override
+	public void convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
+		String str = "";
+		
+		for (int i = 1; i < args.length; i++) {
+			str += (i == 1 ? "" : " ") + args[i];
+		}
+		
+		int t = findTempMem();
+		int currentValue = 0;
+		
+		gotoc(t);
+		
+		for (int i = 0; i < str.length(); i++) {
+			int currentChar = (int) str.charAt(i);
+			
+			if (currentValue > currentChar) {
+				sub(currentChar - currentValue);
+			} else if (currentValue < currentChar) {
+				add(currentValue - currentChar);
+			}
+		}
+	}
+
+}

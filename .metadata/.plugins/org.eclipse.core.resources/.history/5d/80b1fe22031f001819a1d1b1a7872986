@@ -1,0 +1,19 @@
+package compile;
+
+class Equals extends Command {
+	
+	@Override
+	public String name() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public String description() {};
+	
+	@Override
+	public void execute(String string, int line) {
+		// TODO Auto-generated method stub
+		super.execute(string, line);
+	}
+	
+}

@@ -1,0 +1,20 @@
+package compile;
+
+class Txt extends Command {
+
+	@Override
+	public String name() {
+		return "txt";
+	}
+	
+	@Override
+	public String description() {
+		return "txt string";
+	}
+
+	@Override
+	public void convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
+		
+	}
+
+}
