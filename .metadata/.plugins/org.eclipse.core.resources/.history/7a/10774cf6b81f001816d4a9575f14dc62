@@ -1,0 +1,20 @@
+package compile;
+
+class If extends Command {
+
+	@Override
+	public String name() {
+		return null;
+	}
+	
+	@Override
+	public String description() {
+	}
+	
+	@Override
+	public void convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
+	}
+	
+	
+	
+}

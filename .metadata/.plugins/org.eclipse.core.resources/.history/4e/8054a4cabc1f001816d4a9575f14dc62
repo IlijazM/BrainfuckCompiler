@@ -1,0 +1,26 @@
+package menu.menubar;
+
+import compile.Command;
+import menu.MenuHandler;
+
+class Help_Commands extends MenuHandler {
+
+	@Override
+	public String name() {
+		return "Command";
+	}
+
+	@Override
+	public MenuHandler[] getItems() {
+		MenuHandler[] menus = new MenuHandler[Command.commands.size()];
+		
+		
+		
+		return menus;
+	}
+
+	@Override
+	public void action() {
+	}
+	
+}

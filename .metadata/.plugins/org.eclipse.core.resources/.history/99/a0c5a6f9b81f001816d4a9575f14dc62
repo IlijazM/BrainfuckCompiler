@@ -1,0 +1,21 @@
+package compile;
+
+class If extends Command {
+
+	@Override
+	public String name() {
+		return "if";
+	}
+	
+	@Override
+	public String description() {
+		return "if bool";
+	}
+	
+	@Override
+	public void convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
+	}
+	
+	
+	
+}

@@ -5,12 +5,14 @@ import java.util.ArrayList;
 public abstract class Command {
 	
 	static ArrayList<String> vars;
+	static ArrayList<Integer> mode;
 	static ArrayList<String> functions;
 	static ArrayList<Integer> functionsPointer;
 	public static ArrayList<Command> commands;
 	
 	public static void Init() {
 		vars = new ArrayList<>();
+		mode = new ArrayList<>();
 		functions = new ArrayList<>();
 		functionsPointer = new ArrayList<>();
 		commands = new ArrayList<>();
@@ -29,6 +31,7 @@ public abstract class Command {
 		commands.add(new Invert());
 		commands.add(new Not());
 		commands.add(new While());
+		commands.add(new If());
 		commands.add(new End());
 	}
 	

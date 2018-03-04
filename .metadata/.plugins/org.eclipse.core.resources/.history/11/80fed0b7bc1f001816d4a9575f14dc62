@@ -1,0 +1,23 @@
+package menu.menubar;
+
+import menu.MenuHandler;
+
+class Help_Commands extends MenuHandler {
+
+	@Override
+	public String name() {
+		return "Command";
+	}
+
+	@Override
+	public MenuHandler[] getItems() {
+		
+		
+		return menus;
+	}
+
+	@Override
+	public void action() {
+	}
+	
+}

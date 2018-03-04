@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import javax.swing.JMenuBar;
 
 import menu.menubar.File;
+import menu.menubar.Help;
 
 public class Menu {
 	
@@ -26,6 +27,7 @@ public class Menu {
 	
 	public static void initMenu1(Menu menu) {
 		menu.add(new File());
+		menu.add(new Help());
 	}
 	
 }

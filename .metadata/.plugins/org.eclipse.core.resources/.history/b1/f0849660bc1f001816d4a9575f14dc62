@@ -1,0 +1,8 @@
+package menu.menubar;
+
+import menu.Menu;
+import menu.MenuHandler;
+
+public class Help extends MenuHandler {
+	
+}

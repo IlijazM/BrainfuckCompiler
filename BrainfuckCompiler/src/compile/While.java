@@ -17,6 +17,7 @@ class While extends Command {
 		int pointer = getPointer(args[1]);
 		gotoc(pointer);
 		
+		Command.mode.add(0);
 		Command.functions.add(args[2]);
 		Command.functionsPointer.add(pointer);
 		
