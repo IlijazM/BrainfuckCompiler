@@ -53,8 +53,8 @@ public abstract class Command {
 			a += "  |  " + vars.get(i);
 		}
 		
-		System.out.println("[" + Compiler.pointer + "] " + string);
-		System.out.println(a);
+		// System.out.println("[" + Compiler.pointer + "] " + string);
+		// System.out.println(a);
 	}
 	
 	static int getPointer(String s) {

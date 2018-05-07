@@ -21,13 +21,22 @@ class For extends Command {
 		if (isNumber(args[3])) {
 			add(Integer.parseInt(args[3]));
 		} else {
-			
+			set(pointer, getPointer(args[3]));
 		}
 		
 		if (isNumber(args[2])) {
 			sub(Integer.parseInt(args[2]));
 		} else {
+			int t = findTempMem();
 			
+			set(t, getPointer(args[2]));
+			gotoc(t);
+			append("[");
+			gotoc(pointer);
+			append("-");
+			gotoc(t);
+			append("-]");
+			gotoc(pointer);
 		}
 		
 		Command.mode.add(0);
@@ -44,7 +53,8 @@ class For extends Command {
 		if (isNumber(args[3])) {
 			add(Integer.parseInt(args[3]));
 		} else {
-			
+			append("[-]");
+			set(var, getPointer(args[3]));
 		}
 		
 		int t = findTempMem();

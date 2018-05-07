@@ -9,7 +9,7 @@ class If extends Command {
 	
 	@Override
 	public String description() {
-		return "if bool";
+		return "if bool loopname";
 	}
 	
 	@Override
@@ -22,7 +22,7 @@ class If extends Command {
 		set(t, pointer);
 		
 		gotoc(t);
-		append("[");
+		append("[[-]");
 		
 		Command.mode.add(1);
 		Command.functions.add(args[2]);
