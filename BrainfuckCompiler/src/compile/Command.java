@@ -31,6 +31,7 @@ public abstract class Command {
 		commands.add(new Invert());
 		commands.add(new Not());
 		commands.add(new While());
+		commands.add(new For());
 		commands.add(new If());
 		commands.add(new End());
 	}
@@ -45,6 +46,15 @@ public abstract class Command {
 			
 			command.execute(string, i + 1);
 		}
+		
+		String a = "";
+		
+		for (int i = 0; i < vars.size(); i++) {
+			a += "  |  " + vars.get(i);
+		}
+		
+		System.out.println("[" + Compiler.pointer + "] " + string);
+		System.out.println(a);
 	}
 	
 	static int getPointer(String s) {
@@ -181,6 +191,9 @@ public abstract class Command {
 	static void set(int i, int j) {
 		int p = Compiler.pointer;
 		int t = findTempMem();
+		
+		gotoc(t);
+		append("[-]");
 		
 		gotoc(j);
 		append("[-");

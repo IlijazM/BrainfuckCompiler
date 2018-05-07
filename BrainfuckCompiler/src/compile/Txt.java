@@ -21,6 +21,7 @@ class Txt extends Command {
 		}
 		
 		int t = findTempMem();
+		
 		int currentValue = 0;
 		
 		gotoc(t);

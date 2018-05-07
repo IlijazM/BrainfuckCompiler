@@ -1,0 +1,44 @@
+INFO  2018-04-02 16:18:41,090 (Saros.java:220) Starting Saros 14.10.31 running:
+  Java Version: 1.8.0_101
+  Java Vendor: Oracle Corporation
+  Eclipse Runtime Version: 3.11.1.v20150903-1804
+  Operating System: Windows 10 (10.0)
+  Hardware Architecture: x86
+INFO  2018-04-02 16:18:41,112 (SarosContext.java:153) creating Saros runtime context...
+DEBUG 2018-04-02 16:18:41,147 (XMPPAccountStore.java:117) loading accounts from file: C:\Users\smurf\.saros\config.dat
+DEBUG 2018-04-02 16:18:41,413 (XMPPAccountStore.java:176) loaded 2 account(s)
+INFO  2018-04-02 16:18:41,546 (SarosContext.java:199) successfully created Saros runtime context
+DEBUG 2018-04-02 16:18:41,562 (DataTransferManager.java:467) used transport order for the current XMPP connection: [XMPP-Socks5-Transport, XMPP-IBB-Transport]
+INFO  2018-04-02 16:18:41,647 (PreferenceInitializer.java:50) initializing preference default values
+DEBUG 2018-04-02 16:18:41,691 (SarosAnnotation.java:117) resetting annotation colors
+DEBUG 2018-04-02 16:18:41,747 (Saros.java:430) skipping conversion of old XMPP accounts, because there are already new ones
+DEBUG 2018-04-02 16:18:54,460 (WhiteboardManager.java:194) WhiteboardManager instantiated
+DEBUG 2018-04-02 16:18:54,477 (DocumentRecord.java:93) Added Node: attr(152267873447432257) name=svg
+DEBUG 2018-04-02 16:18:55,368 (XMPPConnectionService.java:439) started Socks5 proxy on port: 7777 [listening on all interfaces]
+DEBUG 2018-04-02 16:18:55,511 (XMPPConnectionService.java:459) using autodetected addresses: [25.46.160.179, 192.168.0.25, 192.168.56.1, fe80:0:0:0:d4b4:e6e8:1571:55ec%eth2, 2a02:8070:79d:c200:0:0:0:3, 2a02:8070:79d:c200:fde1:8ac0:7e0e:e6c6, 2a02:8070:79d:c200:3505:97c3:5eea:9618, fe80:0:0:0:fde1:8ac0:7e0e:e6c6%eth3, 2001:0:9d38:78cf:14c9:1e6f:a02f:78b, fe80:0:0:0:14c9:1e6f:a02f:78b%net4, 2620:9b:0:0:0:0:192e:a0b3, fe80:0:0:0:ecf7:ce32:9add:8485%eth7]
+DEBUG 2018-04-02 16:18:55,571 (XMPPConnectionService.java:398)  new connection state == CONNECTING
+ERROR 2018-04-02 16:18:55,687 (StunServiceImpl.java:263) error sending STUN request
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(Unknown Source)
+	at java.net.DatagramSocket.send(Unknown Source)
+	at de.fu_berlin.inf.dpp.net.stun.internal.StunServiceImpl$StunDiscovery$1.run(StunServiceImpl.java:255)
+	at java.lang.Thread.run(Unknown Source)
+ERROR 2018-04-02 16:18:55,827 (StunServiceImpl.java:155) an error occurred while performing a STUN discovery: ICMP Port Unreachable
+java.net.PortUnreachableException: ICMP Port Unreachable
+	at java.net.DualStackPlainDatagramSocketImpl.socketReceiveOrPeekData(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.receive0(Unknown Source)
+	at java.net.AbstractPlainDatagramSocketImpl.receive(Unknown Source)
+	at java.net.DatagramSocket.receive(Unknown Source)
+	at de.fu_berlin.inf.dpp.net.stun.internal.StunServiceImpl$StunDiscovery.performStunDiscovery(StunServiceImpl.java:284)
+	at de.fu_berlin.inf.dpp.net.stun.internal.StunServiceImpl$StunDiscovery.run(StunServiceImpl.java:151)
+	at java.lang.Thread.run(Unknown Source)
+DEBUG 2018-04-02 16:18:56,559 (XMPPConnectionService.java:398) ilijaz@saros-con.imp.fu-berlin.de/Saros new connection state == CONNECTED
+DEBUG 2018-04-02 16:18:56,560 (DataTransferManager.java:467) used transport order for the current XMPP connection: [XMPP-Socks5-Transport, XMPP-IBB-Transport]
+DEBUG 2018-04-02 16:18:56,573 (SkypeManager.java:289) Refreshing Skype username cache...
+DEBUG 2018-04-02 16:19:00,868 (SharedDocumentProvider.java:77) SharedDocumentProvider created by Eclipse
+WARN  2018-04-02 16:19:05,686 (StunServiceImpl.java:420) received no response from STUN server stunserver.org/67.227.226.240:3478 at local address /192.168.56.1:0
+WARN  2018-04-02 16:19:05,686 (StunServiceImpl.java:420) received no response from STUN server stunserver.org/67.227.226.240:3478 at local address /25.46.160.179:0
+DEBUG 2018-04-02 16:19:11,393 (XMPPConnectionService.java:398) ilijaz@saros-con.imp.fu-berlin.de/Saros new connection state == DISCONNECTING
+DEBUG 2018-04-02 16:19:11,547 (XMPPConnectionService.java:398)  new connection state == NOT_CONNECTED
+DEBUG 2018-04-02 16:19:11,547 (UPnPServiceImpl.java:295) deleting existing port mappings

@@ -23,6 +23,10 @@ public class Compiler {
 			Command.executeAll(line);
 		}
 		
+		for (int i = 0; i < Command.vars.size(); i++) {
+			// System.out.println(Command.vars.get(i));
+		}
+		
 		return out;
 	}
 	

@@ -15,7 +15,10 @@ class Print extends Command {
 	@Override
 	public void convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
 		if (isNumber(args[1])) {
+			System.out.println("current pointer = " + Compiler.pointer);
+			
 			int t = findTempMem();
+			System.out.println("temp memory = " + t);
 			gotoc(t);
 			append("[-]");
 			add(Integer.parseInt(args[1]));
