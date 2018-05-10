@@ -22,6 +22,7 @@ public abstract class Command {
 		commands.add(new Move());
 		commands.add(new Add());
 		commands.add(new Sub());
+		commands.add(new Mul());
 		commands.add(new Print());
 		commands.add(new Log());
 		commands.add(new Txt());
@@ -102,6 +103,10 @@ public abstract class Command {
 		}
 		
 		return -1;
+	}
+	
+	static void clear() {
+		append("[-]");
 	}
 	
 	static void add(int amount) {

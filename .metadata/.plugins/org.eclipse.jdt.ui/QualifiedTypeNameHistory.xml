@@ -30,4 +30,5 @@
 <fullyQualifiedTypeName name="compile.Command"/>
 <fullyQualifiedTypeName name="java.awt.PointerInfo"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.security.GeneralSecurityException"/>
 </qualifiedTypeNameHistroy>

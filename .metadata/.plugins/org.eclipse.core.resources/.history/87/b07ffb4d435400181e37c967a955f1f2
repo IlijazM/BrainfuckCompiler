@@ -1,0 +1,33 @@
+package compile;
+
+class Mul extends Command {
+
+	@Override
+	public String name() {
+		return "mul";
+	}
+	
+	@Override
+	public String description() {
+		return "mul var factor";
+	}
+	
+	@Override
+	public void convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
+		int t1 = findTempMem();
+		int t2 = findTempMem();
+		
+		int x = getPointer(args[1]);
+		int y = 0;
+		
+		if (isNumber(args[2])) {
+			y = findTempMem();
+			gotoc(y);
+			append("[-]");
+			add(y, Integer.parseInt(args[2]));
+		} else {
+			y = getPointer(args[2]);
+		}
+	}
+	
+}

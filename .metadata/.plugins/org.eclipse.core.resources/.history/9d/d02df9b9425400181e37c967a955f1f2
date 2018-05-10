@@ -1,0 +1,34 @@
+package compile;
+
+class Mul extends Command {
+	
+
+	@Override
+	public String name() {
+		return "if";
+	}
+	
+	@Override
+	public String description() {
+		return "if bool loopname";
+	}
+	
+	@Override
+	public void convert(String[] args) throws IndexOutOfBoundsException, NumberFormatException {
+		int t = findTempMem();
+		Compiler.mem[t] = 1;
+		
+		int pointer = getPointer(args[1]);
+		
+		set(t, pointer);
+		
+		gotoc(t);
+		append("[[-]");
+		
+		Command.mode.add(1);
+		Command.functions.add(args[2]);
+		Command.functionsPointer.add(t);
+	}
+	
+	
+}
